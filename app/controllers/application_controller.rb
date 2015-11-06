@@ -4,12 +4,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   def after_sign_in_path_for(resource)
-    if user.role == 'student'
-        admin_root_path
-    elsif user.role == 'teacher'
-        user_root_path
+    if current_user.role == 'student'
+      admin_root_path
+    elsif current_user.role == 'teacher'
+      user_root_path
     else
-       
+      subjects_path
     end
   end
   
