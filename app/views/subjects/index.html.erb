@@ -9,11 +9,11 @@
   <% @subject.each do |subject| %>
     <tr>
       <td><%= subject.sname %></td>
-      <td><%= link_to 'Show', subject_path(subject) %></td>
-      <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
+      <td><%= link_to 'Show', subject_path(subject), :class => 'btn btn-default' %></td>
+      <td><%= link_to 'Edit', edit_subject_path(subject), :class => 'btn btn-default' %></td>
 	  <td><%= link_to 'Destroy', subject_path(subject),
 	                method: :delete,
-	                data: { confirm: 'Are you sure?' } %></td>
+	                data: { confirm: 'Are you sure?' }, :class => 'btn btn-default' %></td>
     </tr>
   <% end %>
 </table>

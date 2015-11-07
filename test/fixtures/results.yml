@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sid: 1
+  subject: MyString
+  marks: 1
+
+two:
+  sid: 1
+  subject: MyString
+  marks: 1
