@@ -8,6 +8,13 @@ Rails.application.routes.draw do
   resources :subjects
   
   resources :results
+  
+  resources :home do
+    collection do
+      get 'marks'
+    end
+  end
+  
 
   # You can have the root of your site routed with "root"
    root 'home#index'

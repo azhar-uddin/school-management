@@ -16,7 +16,8 @@
  
   <p>
     <%= f.label :sid %>
-    <%= f.text_field :sid %>
+	<% options = options_from_collection_for_select(@users, 'id', 'id') %>
+	<%= f.select :sid,  options %>
   </p>
   
   <p>

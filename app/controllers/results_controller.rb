@@ -3,6 +3,7 @@ class ResultsController < ApplicationController
   def new
     @result = Result.new
     @subjects = Subject.all
+    @users = User.where(:role => 0)
   end
   
   def create

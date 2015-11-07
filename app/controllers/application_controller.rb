@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   
   def after_sign_in_path_for(resource)
     if current_user.role == 'student'
-      admin_root_path
+      marks_home_index_path(:id => current_user.id)
     elsif current_user.role == 'teacher'
       user_root_path
     else
